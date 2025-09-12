@@ -1,0 +1,34 @@
+﻿# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build files
+.next/
+out/
+build/
+
+# Environment variables
+.env*
+!.env.example
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local development
+.DS_Store
+*.pem
+
+# Production
+.cache
+coverage/
+
+# IDE
+.vscode/
+.idea/
+
+# Screenshots (if they're large)
+/public/screenshots/
+/quizzer screenshot/
