@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
-import { Github, ExternalLink, Star, ArrowRight, Code } from 'lucide-react';
+import { Github, ExternalLink, ArrowRight, Code, Star } from 'lucide-react';
 import { projects } from '@/lib/data';
 import { useRef, useState } from 'react';
 
@@ -111,7 +111,6 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
         )}
       </div>
 
-      {/* Project Info */}
       <div className="p-6">
         <div className="flex justify-between items-start mb-4">
           <h3 className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-500 transition-all duration-300">
@@ -144,9 +143,9 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              {project.live && project.live !== '#' && (
+              {project.liveDemo && project.liveDemo !== '#' && (
                 <a
-                  href={project.live}
+                  href={project.liveDemo}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative inline-flex items-center gap-2 px-4 py-2.5 overflow-hidden rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 hover:-translate-y-0.5"
@@ -287,7 +286,6 @@ export function Projects() {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          <p className="text-gray-400 mb-6">Want to see more of my work?</p>
           <a
             href="https://github.com/kuldeep54"
             target="_blank"

@@ -70,10 +70,10 @@ export const projects = [
   {
     id: 1,
     title: "Amazon Clone",
-    description: "Full-featured e-commerce platform with product listings, search functionality, shopping cart, and modern responsive UI design.",
-    technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    description: "A responsive e-commerce platform replicating Amazon's core features including product listings, search, and shopping cart functionality.",
+    technologies: ["React", "Context API", "Firebase", "Stripe", "Material-UI"],
     github: "https://github.com/kuldeep54/Amazon-Clone",
-    live: "https://kuldeep54.github.io/Amazon-Clone/",
+    liveDemo: "https://clone-6f7f1.web.app/",
     screenshots: [
       "/screenshots/amazon/home.png",
       "/screenshots/amazon/products.png",
@@ -88,7 +88,7 @@ export const projects = [
     description: "Modern e-commerce platform with comprehensive product catalog, shopping cart functionality, and user authentication system.",
     technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
     github: "https://github.com/kuldeep54/GoodToGo",
-    live: "https://kuldeep54.github.io/GoodToGo/",
+    liveDemo: "https://kuldeep54.github.io/GoodToGo/",
     screenshots: [
       "/screenshots/googtogo/home.png",
       "/screenshots/googtogo/products.png",
@@ -103,7 +103,7 @@ export const projects = [
     description: "Interactive quiz application with multiple categories, real-time scoring system, and engaging user interface.",
     technologies: ["React", "CSS", "JavaScript", "Local Storage"],
     github: "https://github.com/kuldeep54/Quizzer",
-    live: "https://quizzer-asnh75r9g-kuldeep-malviyas-projects-9da12c6e.vercel.app",
+    liveDemo: "https://quizzer-asnh75r9g-kuldeep-malviyas-projects-9da12c6e.vercel.app",
     screenshots: [
       "/screenshots/quizzer/home.png",
       "/screenshots/quizzer/quiz.png"
@@ -117,7 +117,7 @@ export const projects = [
     description: "Professional portfolio website built with Next.js, TypeScript, and Tailwind CSS featuring smooth animations and functional contact form.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/kuldeep54/portfolio",
-    live: "#",
+    liveDemo: "#",
     image: "/screenshots/portfolio.png",
     featured: false
   }

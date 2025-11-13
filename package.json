@@ -2,19 +2,17 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/portfolio",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "gh-pages -d out",
-    "predeploy": "npm run build"
+    "lint": "next lint"
   },
   "dependencies": {
     "framer-motion": "^11.11.17",
     "lucide-react": "^0.451.0",
     "next": "14.2.15",
+    "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
     "resend": "^3.5.0",
@@ -27,7 +25,6 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^8",
     "eslint-config-next": "14.2.15",
-    "gh-pages": "^6.3.0",
     "postcss": "^8",
     "typescript": "^5"
   }
