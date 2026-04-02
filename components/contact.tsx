@@ -41,12 +41,26 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setSubmitStatus('success');
+    setSubmitStatus('idle');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch {
+      setSubmitStatus('error');
+    } finally {
       setIsSubmitting(false);
-      setFormData({ name: '', email: '', message: '' });
-    }, 1500);
+    }
   };
 
   return (
@@ -231,6 +245,12 @@ export function Contact() {
                     lineHeight={32}
                     className="!text-emerald-400"
                    />
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="mt-6 p-4 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center gap-3">
+                  <AlertCircle className="w-5 h-5 text-red-400 shrink-0" />
+                  <p className="text-sm text-red-400 font-medium">Failed to send. Please try again or email me directly.</p>
                 </div>
               )}
             </motion.div>

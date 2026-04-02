@@ -1,4 +1,4 @@
-﻿# Dependencies
+# Dependencies
 node_modules/
 .pnp
 .pnp.js
@@ -29,6 +29,7 @@ coverage/
 .vscode/
 .idea/
 
-# Screenshots (if they're large)
-/public/screenshots/
+# Large external screenshot folders (not public dir)
 /quizzer screenshot/
+/amazon screenshot/
+/googtogo screenshot/
