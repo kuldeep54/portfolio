@@ -1,30 +1,22 @@
 import { NextResponse } from 'next/server';
+import { readFile } from 'fs/promises';
+import { join } from 'path';
 
 export async function GET() {
   try {
-    // Raw GitHub URL for the resume
-    const resumeUrl = 'https://raw.githubusercontent.com/kuldeep54/resume/main/Kuldeep%20Malviya%20Resume%20(1).pdf';
+    const resumePath = join(process.cwd(), 'public', 'resume.pdf');
+    const buffer = await readFile(resumePath);
     
-    // Fetch the PDF from GitHub
-    const response = await fetch(resumeUrl);
-    
-    if (!response.ok) {
-      throw new Error(`Failed to fetch resume: ${response.statusText}`);
-    }
-
-    const arrayBuffer = await response.arrayBuffer();
-    const buffer = Buffer.from(arrayBuffer);
-    
-    return new NextResponse(buffer, {
+    return new NextResponse(new Uint8Array(buffer), {
       headers: {
         'Content-Type': 'application/pdf',
         'Content-Disposition': 'attachment; filename="Kuldeep_Malviya_Resume.pdf"',
         'Content-Length': buffer.length.toString(),
-        'Cache-Control': 'public, max-age=3600' // Cache for 1 hour
+        'Cache-Control': 'public, max-age=3600'
       },
     });
   } catch (error) {
-    console.error('Error fetching resume from GitHub:', error);
+    console.error('Error reading resume file:', error);
     return new NextResponse(
       JSON.stringify({ error: 'Failed to download resume' }), 
       { status: 500, headers: { 'Content-Type': 'application/json' } }

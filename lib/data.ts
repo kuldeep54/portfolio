@@ -6,33 +6,32 @@ export const personalData = {
   location: "Greater Noida, India",
   github: "https://github.com/kuldeep54",
   linkedin: "https://linkedin.com/in/kuldeep-malviya-017314253",
-  summary: "Resourceful and solutions-oriented Computer Science & Engineering student with hands-on experience in web development. Skilled in building responsive websites using HTML, CSS, JavaScript, and React. Strong problem solver with proven teamwork, adaptability, and project execution skills.",
+  summary: "Resourceful and solutions-oriented Computer Science & Engineering student with hands-on experience in Java Full Stack and modern web development. Skilled in building responsive, scalable applications using React, Spring Boot, and Java.",
   
   experience: [
     {
       id: 1,
+      title: "Java Full Stack Developer Virtual Internship",
+      company: "EduSkills (AICTE Supported)",
+      location: "Remote",
+      duration: "Oct 2025 - Dec 2025",
+      type: "Internship",
+      achievements: [
+        "Earned 'O' Grade (Outstanding) for excellence in building end-to-end full-stack applications.",
+        "Mastered JavaSE, Spring Framework, and advanced web architectures in a 10-week intensive program.",
+        "Developed and deployed scalable backend services integrated with modern React frontends."
+      ]
+    },
+    {
+      id: 2,
       title: "AI-ML Virtual Internship",
       company: "AICTE",
       location: "Remote",
       duration: "Jan 2024 - Mar 2024",
       type: "Internship",
       achievements: [
-        "Achieved AWS AI-ML Foundations certification",
-        "Data preprocessing, model training, evaluation, deployment",
-        "Gained hands-on experience with machine learning workflows"
-      ]
-    },
-    {
-      id: 2,
-      title: "Cloud Virtual Internship",
-      company: "AICTE",
-      location: "Remote", 
-      duration: "Sept 2023 - Nov 2023",
-      type: "Internship",
-      achievements: [
-        "AWS Cloud Foundations certification",
-        "Learned architecture, services, security, deployment",
-        "Understanding of cloud infrastructure and best practices"
+        "Achieved AWS AI-ML Foundations certification accredited by AICTE, demonstrating strong fundamentals in machine learning concepts.",
+        "Gained hands-on experience with ML workflows including data preprocessing, model training, evaluation, and deployment."
       ]
     }
   ],
@@ -42,18 +41,46 @@ export const personalData = {
       id: 1,
       degree: "Bachelor of Technology in Computer Science & Engineering",
       institution: "Galgotias University",
-      location: "Greater Noida",
-      duration: "2022 - 2026",
-      status: "Pursuing"
+      location: "Greater Noida, Uttar Pradesh",
+      duration: "Sept 2022 - July 2026",
+      status: "Pursuing",
+      achievements: [
+        "Focusing on Full-Stack Development and Software Engineering principles.",
+        "Active participant in technical symposiums and university-level coding competitions."
+      ]
+    },
+    {
+      id: 2,
+      degree: "Senior Secondary (Class XII) - Science",
+      institution: "ST. Joseph's School (ICSE)",
+      location: "Gorakhpur, Uttar Pradesh",
+      duration: "Apr 2021 - Mar 2022",
+      status: "Completed",
+      achievements: [
+        "Specialized in Physics, Chemistry, and Mathematics (PCM).",
+        "Demonstrated strong analytical and problem-solving skills in ISC Board examinations."
+      ]
+    },
+    {
+      id: 3,
+      degree: "High School (Class X)",
+      institution: "ST. Joseph's School (ICSE)",
+      location: "Gorakhpur, Uttar Pradesh",
+      duration: "Apr 2019 - Mar 2020",
+      status: "Completed",
+      achievements: [
+        "Achieved excellence across all fundamental disciplines of secondary education.",
+        "Graduated from ICSE Board with honors in elective subjects."
+      ]
     }
   ],
 
   skills: {
     frontend: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
-    backend: ["Java", "Node.js", "Express.js"],
-    tools: ["GitHub", "Git", "VS Code"],
-    cloud: ["AWS Basics", "Cloud Architecture"],
-    other: ["AI/ML Basics", "Responsive Design", "Problem Solving"]
+    backend: ["Node.js", "Express.js", "Java", "Python"],
+    database: ["MongoDB", "SQL", "MongoDB Atlas"],
+    tools: ["GitHub", "Git", "VS Code", "Postman"],
+    other: ["AI/ML Basics", "Responsive Design", "Problem Solving", "Puter.js"]
   },
 
   languages: ["English", "Hindi"],
@@ -61,29 +88,39 @@ export const personalData = {
   platforms: ["Windows", "Linux"],
 
   certifications: [
-    "AWS AI-ML Foundations",
-    "AWS Cloud Foundations"
+    "AWS AI-ML Foundations"
   ]
 };
 
 export const projects = [
   {
     id: 1,
-    title: "Amazon Clone",
-    description: "A responsive e-commerce platform replicating Amazon's core features including product listings, search, and shopping cart functionality.",
-    technologies: ["React", "Context API", "Firebase", "Stripe", "Material-UI"],
-    github: "https://github.com/kuldeep54/Amazon-Clone",
-    liveDemo: "https://clone-6f7f1.web.app/",
+    title: "SAP Order-to-Cash AI Analytics",
+    description: "An interactive, full-stack analytics platform for exploring SAP Order-to-Cash (O2C) process data through a conversational AI interface and an immersive 3D knowledge graph.",
+    technologies: ["React 19", "Three.js", "FastAPI", "SQLite", "Groq AI", "Llama 3.1"],
+    github: "https://github.com/kuldeep54/OrderToCash",
+    liveDemo: "https://ordertocash-frontend.onrender.com/",
     screenshots: [
-      "/screenshots/amazon/home.png",
-      "/screenshots/amazon/products.png",
-      "/screenshots/amazon/cart.png"
+      "/screenshots/ordertocash/home.png"
     ],
-    image: "/screenshots/amazon/home.png",
+    image: "/screenshots/ordertocash/home.png",
     featured: true
   },
   {
     id: 2,
+    title: "AnyTalk - Real-time Meeting Platform",
+    description: "A real-time video meeting platform featuring live transcription and translation capabilities, designed to break language barriers by allowing participants to communicate seamlessly in different languages.",
+    technologies: ["Flask", "WebRTC", "SocketIO", "Transcription", "Translation", "Python"],
+    github: "https://github.com/kuldeep54/BreakLanguageBarriers",
+    liveDemo: "https://breaklanguagebarriers.railway.app/",
+    screenshots: [
+      "/screenshots/anytalk/home.png"
+    ],
+    image: "/screenshots/anytalk/home.png",
+    featured: true
+  },
+  {
+    id: 3,
     title: "GoodToGo",
     description: "Modern e-commerce platform with comprehensive product catalog, shopping cart functionality, and user authentication system.",
     technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
@@ -98,7 +135,7 @@ export const projects = [
     featured: true
   },
   {
-    id: 3,
+    id: 4,
     title: "Quizzer",
     description: "Interactive quiz application with multiple categories, real-time scoring system, and engaging user interface.",
     technologies: ["React", "CSS", "JavaScript", "Local Storage"],
@@ -110,16 +147,6 @@ export const projects = [
     ],
     image: "/screenshots/quizzer/home.png",
     featured: true
-  },
-  {
-    id: 4,
-    title: "Portfolio Website",
-    description: "Professional portfolio website built with Next.js, TypeScript, and Tailwind CSS featuring smooth animations and functional contact form.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/kuldeep54/portfolio",
-    liveDemo: "#",
-    image: "/screenshots/portfolio.png",
-    featured: false
   }
 ];
 

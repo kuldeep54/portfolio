@@ -1,8 +1,17 @@
+import React from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { siteMetadata } from '@/lib/data'
+import dynamic from 'next/dynamic'
 
+const SmoothScroll = dynamic(() => import('@/components/SmoothScroll'), { ssr: false })
+const CustomCursor = dynamic(() => import('@/components/CustomCursor'), { ssr: false })
+const AnimatedBackground = dynamic(() => import('@/components/AnimatedBackground'), { ssr: false })
+import { LoadingIndicator } from '@/components/LoadingIndicator'
+import { Suspense } from 'react'
+
+// We use framer-motion and CSS for stable '3D-like' effects
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -47,15 +56,31 @@ export const metadata: Metadata = {
   },
 }
 
+import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className="dark">
-      <body className={inter.className}>
-        {children}
+    <html lang="en" suppressHydrationWarning className="dark select-none">
+      <body className={`${inter.className} bg-[#09090B] antialiased`}>
+        <SmoothScroll>
+          <CustomCursor />
+          <div className="relative z-0 min-h-screen overflow-x-hidden">
+            <Suspense fallback={null}>
+              <LoadingIndicator />
+            </Suspense>
+            <AnimatedBackground />
+            <Navbar />
+            <main className="min-h-screen text-foreground selection:bg-blue-500/30">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </SmoothScroll>
       </body>
     </html>
   )

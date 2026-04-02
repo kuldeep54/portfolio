@@ -98,7 +98,7 @@ export function ProfileTiltPhoto() {
           transition={{ duration: 0.3 }}
         >
           <p className="text-white font-semibold text-sm font-heading">Kuldeep Malviya</p>
-          <p className="text-gray-300 text-xs font-sans">Full-Stack Developer</p>
+          <p className="text-muted-foreground text-xs font-sans">Full-Stack Developer</p>
         </motion.div>
       </motion.div>
 
